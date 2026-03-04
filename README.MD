@@ -18,11 +18,13 @@ Synchtank is a small web application to manage music tracks. The app allows you 
 
 #### Installation Steps
 
-1. git clone git@github.com:realmocaccino/synchtank.git
+```bash
+git clone git@github.com:realmocaccino/synchtank.git
 
-2. cd synchtank
+cd synchtank
     
-3. docker-compose up -d --build
+docker-compose up -d --build
+```
 
 ## Manual Installation
 
@@ -33,7 +35,9 @@ Synchtank is a small web application to manage music tracks. The app allows you 
 - Node.js 16+ and npm
 
 ### Clone the Repository
+```bash
 git clone git@github.com:realmocaccino/synchtank.git
+```
 
 ### Set Up Backend
 
@@ -72,3 +76,9 @@ npm install
 # Start development server
 npm run dev
 ```
+
+## Access URLs
+
+If using Docker: http://localhost:5173
+
+If installed manually: http://localhost:3000/
