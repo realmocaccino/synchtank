@@ -7,7 +7,24 @@ Synchtank is a small web application to manage music tracks. The app allows you 
 - **Backend:** REST API built with Symfony 6
 - **Frontend:** Vue 3 application using Tailwind CSS
 
-## Manual Setup Instructions
+## Docker Installation
+
+#### Prerequisites
+
+*   Docker
+    
+*   Docker Compose
+    
+
+#### Installation Steps
+
+1. git clone git@github.com:realmocaccino/synchtank.git
+
+2. cd synchtank
+    
+3. docker-compose up -d --build
+
+## Manual Installation
 
 ### Prerequisites
 - PHP 8.1 or higher
@@ -16,13 +33,13 @@ Synchtank is a small web application to manage music tracks. The app allows you 
 - Node.js 16+ and npm
 
 ### Clone the Repository
-git clone https://github.com/realmocaccino/synchtank
+git clone git@github.com:realmocaccino/synchtank.git
 
 ### Set Up Backend
 
 ```bash
 # Navigate to backend directory
-cd synchtank/backend
+cd backend
 
 # Install PHP dependencies
 composer install
@@ -31,7 +48,7 @@ composer install
 cp .env .env.local
 
 # Edit .env.local with your database credentials
-DATABASE_URL="mysql://username:password@127.0.0.1:3306/track_db"
+DATABASE_URL="mysql://username:password@127.0.0.1:3306/database_name"
 
 # Create database
 php bin/console doctrine:database:create
@@ -51,13 +68,6 @@ cd frontend
 
 # Install Node dependencies
 npm install
-
-# Install additional dependencies (if not in package.json)
-npm install axios vue pinia @vitejs/plugin-vue
-npm install -D tailwindcss postcss autoprefixer
-
-# Initialize Tailwind CSS (if not already configured)
-npx tailwindcss init -p
 
 # Start development server
 npm run dev
