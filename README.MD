@@ -83,6 +83,6 @@ npm run dev
 
 ## Access URLs
 
-**If using Docker:** http://{docker-host}:3000/
+**If using Docker:** http://{docker-host}:5173/
 
 **If installed manually:** http://localhost:3000/
