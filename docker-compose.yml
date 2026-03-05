@@ -14,16 +14,16 @@ services:
       - db
 
   frontend:
-    env_file:
-      - ./frontend/.env.docker
     build:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: synchtank-frontend
     ports:
-      - "5173:5173"
+      - "5173:3000"
     depends_on:
       - backend
+    environment:
+      BACKEND_HOST: "http://backend:8000"
 
   db:
     image: mysql:8

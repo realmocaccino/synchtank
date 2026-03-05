@@ -24,6 +24,8 @@ git clone git@github.com:realmocaccino/synchtank.git
 cd synchtank
     
 docker-compose up -d --build
+
+docker-compose exec synchtank-backend php bin/console doctrine:migrations:migrate --no-interaction
 ```
 
 ## Manual Installation
@@ -79,6 +81,6 @@ npm run dev
 
 ## Access URLs
 
-If using Docker: http://localhost:5173
+If using Docker: http://172.18.0.4:3000/
 
 If installed manually: http://localhost:3000/
