@@ -25,7 +25,7 @@ cd synchtank
     
 docker-compose up -d --build
 
-docker-compose exec synchtank-backend php bin/console doctrine:migrations:migrate --no-interaction
+docker-compose exec backend php bin/console doctrine:migrations:migrate --no-interaction
 ```
 
 ## Manual Installation
